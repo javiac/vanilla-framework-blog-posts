@@ -1,5 +1,7 @@
+import { Link } from "@canonical/react-components";
 import classnames from "classnames";
 import { IPost } from "../../../interfaces/IPost";
+import { Citation } from "../../atoms/Citation/Citation";
 
 import styles from "./Post.module.css";
 
@@ -32,19 +34,15 @@ export function Post(props: IPostProps) {
         </h5>
       </header>
       <div className={styles.content}>
-        <a href={post.link}>
+        <Link href={post.link}>
           <img className="p-card__image" src={post.image} alt={post.title} />
-        </a>
+        </Link>
         <div className={styles.titleContainer}>
-          <a href={post.link}>
+          <Link href={post.link}>
             <h3 className={styles.title}>{post.title}</h3>
-          </a>
+          </Link>
         </div>
-        <p className={styles.citation}>
-          <em>
-            By <a href={post.author.link}>{post.author.name}</a> on {post.date}
-          </em>
-        </p>
+        <Citation author={post.author} date={post.date} />
       </div>
       <p className={styles.footer}>{post.category}</p>
     </div>
