@@ -12,6 +12,15 @@ export interface IPostResponse {
   content: { rendered: string };
   _embedded: {
     "wp:term": IWpTerm[][];
+    author: {
+      id: number;
+      name: string;
+      link: string;
+    }[];
   };
   topic: number[];
+  featured_media: string;
+  link: string;
+  date: string;
+  categories: number[];
 }
