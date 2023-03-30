@@ -30,9 +30,14 @@ function mapPostResponse(posts: IPostResponse[]): IPost[] {
 
 export class WpApiClient {
   public async getPosts() {
-    const response = await fetch(
-      "https://people.canonical.com/~anthonydillon/wp-json/wp/v2/posts.json"
-    );
-    return mapPostResponse((await response.json()) as IPostResponse[]);
+    try {
+      const response = await fetch(
+        "https://people.canonical.com/~anthonydillon/wp-json/wp/v2/posts.json"
+      );
+      return mapPostResponse((await response.json()) as IPostResponse[]);
+    } catch (e) {
+      console.error("Error fetching posts", e);
+      return [];
+    }
   }
 }
