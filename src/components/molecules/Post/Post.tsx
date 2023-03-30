@@ -3,7 +3,7 @@ import classnames from "classnames";
 import { IPost } from "../../../interfaces/IPost";
 import { Citation } from "../../atoms/Citation/Citation";
 
-import styles from "./Post.module.css";
+import styles from "./Post.module.scss";
 
 interface IPostProps {
   post: IPost;
