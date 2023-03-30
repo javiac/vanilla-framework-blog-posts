@@ -13,20 +13,13 @@ export function Post(props: IPostProps) {
   const post = props.post;
 
   return (
-    <div
-      className={classnames(
-        "p-card",
-        "col-4",
-        "p-card--highlighted",
-        styles.card
-      )}
-    >
+    <div className={classnames("p-card", "p-card--highlighted", styles.card)}>
       <header className={classnames("p-card__header", styles.header)}>
         <h5
           className={classnames(
             "p-muted-heading",
-            "u-no-margin--bottom",
-            styles.header,
+            "u-align-text--left",
+            "u-no-padding",
             !post.topic ? styles.transparent : ""
           )}
         >
@@ -39,12 +32,16 @@ export function Post(props: IPostProps) {
         </Link>
         <div className={styles.titleContainer}>
           <Link href={post.link}>
-            <h3 className={styles.title}>{post.title}</h3>
+            <h3 className={classnames(styles.title, "u-align-text--left")}>
+              {post.title}
+            </h3>
           </Link>
         </div>
         <Citation author={post.author} date={post.date} />
       </div>
-      <p className={styles.footer}>{post.category}</p>
+      <p className={classnames(styles.footer, "u-align-text--left")}>
+        {post.category}
+      </p>
     </div>
   );
 }

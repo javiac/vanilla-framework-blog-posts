@@ -1,3 +1,4 @@
+import { Col, Row } from "@canonical/react-components";
 import { useEffect, useState } from "react";
 import { IPost } from "../../interfaces/IPost";
 import { WpApiClient } from "../../services/WpApiClient";
@@ -17,10 +18,12 @@ export function Blog() {
   }
 
   return (
-    <div className="row">
+    <Row>
       {posts.map((post) => (
-        <Post key={post.id} post={post} />
+        <Col size={4} key={post.id}>
+          <Post post={post} />
+        </Col>
       ))}
-    </div>
+    </Row>
   );
 }
