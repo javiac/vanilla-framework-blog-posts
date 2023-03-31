@@ -1,6 +1,10 @@
+import axios from "axios";
 import moment from "moment";
 import { IPost } from "../interfaces/IPost";
 import { IPostResponse, IWpTerm } from "../interfaces/IPostResponse";
+
+export const postsUrl =
+  "https://people.canonical.com/~anthonydillon/wp-json/wp/v2/posts.json";
 
 function mapPostResponse(posts: IPostResponse[]): IPost[] {
   return posts.map((post) => {
@@ -31,10 +35,9 @@ function mapPostResponse(posts: IPostResponse[]): IPost[] {
 export class WpApiClient {
   public async getPosts() {
     try {
-      const response = await fetch(
-        "https://people.canonical.com/~anthonydillon/wp-json/wp/v2/posts.json"
-      );
-      return mapPostResponse((await response.json()) as IPostResponse[]);
+      const response = await axios.get(postsUrl);
+
+      return mapPostResponse(response.data as IPostResponse[]);
     } catch (e) {
       console.error("Error fetching posts", e);
       return [];

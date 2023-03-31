@@ -1,7 +1,8 @@
 .card {
   border-top: 3px solid #a87ca0 !important;
-  padding: 0;
+  padding: 0 !important;
   height: 100%;
+  overflow: hidden !important;
 
   .header {
     padding: 1rem 1rem 0.5rem;

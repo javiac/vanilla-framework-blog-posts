@@ -1,8 +1,8 @@
 import { Col, Row } from "@canonical/react-components";
 import { useEffect, useState } from "react";
-import { IPost } from "../../interfaces/IPost";
-import { WpApiClient } from "../../services/WpApiClient";
-import { Post } from "../molecules/Post/Post";
+import { IPost } from "../../../interfaces/IPost";
+import { WpApiClient } from "../../../services/WpApiClient";
+import { Post } from "../../molecules/Post/Post";
 
 export function Blog() {
   const [posts, setPosts] = useState<IPost[]>([]);
