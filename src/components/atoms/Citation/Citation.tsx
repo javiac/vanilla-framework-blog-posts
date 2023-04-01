@@ -1,5 +1,3 @@
-import styles from "./Citation.module.css";
-
 interface ICitationProps {
   author: {
     link: string;
@@ -10,7 +8,7 @@ interface ICitationProps {
 
 export function Citation({ author, date }: ICitationProps) {
   return (
-    <p className={styles.citation}>
+    <p className="u-no-margin u-align-text--left">
       <em>
         By <a href={author.link}>{author.name}</a> on {date}
       </em>

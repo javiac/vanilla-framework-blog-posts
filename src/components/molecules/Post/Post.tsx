@@ -13,7 +13,14 @@ export function Post(props: IPostProps) {
   const post = props.post;
 
   return (
-    <div className={classnames("p-card", "p-card--highlighted", styles.card)}>
+    <div
+      className={classnames(
+        "p-card",
+        "p-card--highlighted",
+        "u-no-padding",
+        styles.card
+      )}
+    >
       <header className={classnames("p-card__header", styles.header)}>
         <h5
           className={classnames(

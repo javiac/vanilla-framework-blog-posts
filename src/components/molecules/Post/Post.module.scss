@@ -1,6 +1,7 @@
+@import "node_modules/vanilla-framework";
+
 .card {
   border-top: 3px solid #a87ca0 !important;
-  padding: 0 !important;
   height: 100%;
   overflow: hidden !important;
 
@@ -14,12 +15,12 @@
   }
 
   .content {
-    border-top: 1px dotted #d9d9d9;
-    border-bottom: 1px dotted #d9d9d9;
+    border-top: 1px dotted $color-mid-light;
+    border-bottom: 1px dotted $color-mid-light;
     display: flex;
     flex-direction: column;
     margin: 0 0.5rem;
-    padding: 1rem 0.5rem 0.5rem;
+    padding: 1rem 0.5rem;
     height: calc(100% - 100px);
 
     .titleContainer {
@@ -35,7 +36,7 @@
   }
 
   .footer {
-    padding: 1rem 1rem 0.5rem;
+    padding: 0.7rem 0.7rem 0.7rem 1rem;
   }
 }
 
