@@ -14,12 +14,7 @@ export function Post(props: IPostProps) {
 
   return (
     <div
-      className={classnames(
-        "p-card",
-        "p-card--highlighted",
-        "u-no-padding",
-        styles.card
-      )}
+      className={classnames("p-card--highlighted", "u-no-padding", styles.card)}
     >
       <header className={classnames("p-card__header", styles.header)}>
         <h5

@@ -1,16 +1,35 @@
-# Blog posts React application using Vanilla framework
+# Blog posts Vanilla framework
 
-This application uses React and Vanilla framework to show a set of blog posts.
+React application using Vanilla framework to show a set of blog posts.
 
-## Install dependencies
+## Run the project
 
-Requirements: node v16 and npm 8
-Run `npm install`
+### Install dependencies
 
-## Start development server
+Requirements: Node v16 and NPM 8
 
-Run `npm start`
+```bash
+npm install
+```
+
+### Start development server
+
+```bash
+npm start
+```
+
+Visit <http://localhost:3000/>
+
+## Run with Docker
+
+```bash
+docker compose up
+```
+
+Visit <http://localhost:3001/>
 
 ## Tests
 
-Run `npm test`
+```bash
+npm test
+```
