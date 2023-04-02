@@ -16,28 +16,30 @@ export function Post(props: IPostProps) {
     <div
       className={classnames("p-card--highlighted", "u-no-padding", styles.card)}
     >
-      <header className={classnames("p-card__header", styles.header)}>
-        <h5
-          className={classnames(
-            "p-muted-heading",
-            "u-align-text--left",
-            "u-no-padding",
-            !post.topic ? styles.transparent : ""
-          )}
-        >
-          {post.topic ?? "Empty"}
-        </h5>
-      </header>
-      <div className={styles.content}>
-        <Link href={post.link}>
-          <img className="p-card__image" src={post.image} alt={post.title} />
-        </Link>
-        <Link href={post.link}>
-          <h3 className={classnames(styles.title, "u-align-text--left")}>
-            {post.title}
-          </h3>
-        </Link>
-        <Citation author={post.author} date={post.date} />
+      <div>
+        <header className={classnames("p-card__header", styles.header)}>
+          <h5
+            className={classnames(
+              "p-muted-heading",
+              "u-align-text--left",
+              "u-no-padding",
+              !post.topic ? styles.transparent : ""
+            )}
+          >
+            {post.topic ?? "Empty"}
+          </h5>
+        </header>
+        <div className={styles.content}>
+          <Link href={post.link}>
+            <img className="p-card__image" src={post.image} alt={post.title} />
+          </Link>
+          <Link href={post.link}>
+            <h3 className={classnames(styles.title, "u-align-text--left")}>
+              {post.title}
+            </h3>
+          </Link>
+          <Citation author={post.author} date={post.date} />
+        </div>
       </div>
       <p className={classnames(styles.footer, "u-align-text--left")}>
         {post.category}
