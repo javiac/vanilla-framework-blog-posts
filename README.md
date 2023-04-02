@@ -2,6 +2,8 @@
 
 React application using Vanilla framework to show a set of blog posts.
 
+![Screenshot](screenshot.png)
+
 ## Run the project
 
 ### Install dependencies

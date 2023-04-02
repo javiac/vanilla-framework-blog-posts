@@ -32,13 +32,11 @@ export function Post(props: IPostProps) {
         <Link href={post.link}>
           <img className="p-card__image" src={post.image} alt={post.title} />
         </Link>
-        <div className={styles.titleContainer}>
-          <Link href={post.link}>
-            <h3 className={classnames(styles.title, "u-align-text--left")}>
-              {post.title}
-            </h3>
-          </Link>
-        </div>
+        <Link href={post.link}>
+          <h3 className={classnames(styles.title, "u-align-text--left")}>
+            {post.title}
+          </h3>
+        </Link>
         <Citation author={post.author} date={post.date} />
       </div>
       <p className={classnames(styles.footer, "u-align-text--left")}>

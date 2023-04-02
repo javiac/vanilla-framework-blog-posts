@@ -1,9 +1,8 @@
 @import "node_modules/vanilla-framework";
 
 .card {
-  border-top: 3px solid #a87ca0 !important;
+  border-top: 3px solid #a87ca0;
   height: 100%;
-  overflow: hidden !important;
 
   .header {
     padding: 1rem 1rem 0.5rem;
@@ -21,17 +20,11 @@
     flex-direction: column;
     margin: 0 0.5rem;
     padding: 1rem 0.5rem;
-    height: calc(100% - 100px);
+    height: calc(100% - 90px);
 
-    .titleContainer {
-      height: 100%;
-      display: flex;
-      align-items: flex-end;
-
-      .title {
-        font-size: 1.306122449rem;
-        font-weight: 300;
-      }
+    .title {
+      font-size: 1.6rem;
+      font-weight: 400;
     }
   }
 
